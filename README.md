@@ -26,3 +26,4 @@
 ### Spring 
   - JWT 
   - REST Api 
+  - Tomcat SSL 인증서 적용
