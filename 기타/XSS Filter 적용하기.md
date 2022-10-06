@@ -16,7 +16,7 @@
 		return output;
     }
  ```
- * 넘겨주는 데이터가 application/json, Map<String, Object, @RequestBody
+ * 넘겨주는 데이터가 application/json, Map<String, Object>, @RequestBody
  * 기존의 XSS 필터가 적용되지 않아  XSS 방지를 새로 작성하여 처리해준다.
 	
 ### 2. JSON API에 XSS 방지 처리

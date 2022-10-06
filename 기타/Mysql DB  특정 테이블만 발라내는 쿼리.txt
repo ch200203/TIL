@@ -1,0 +1,21 @@
+sed -n -e '/DROP TABLE.*targetlist/,/UNLOCK TABLES/p' pds_db_20220311.sql_0311> yesterday.targetlist.sql
+
+
+
+데이터베이스 단위의 테이블 백업
+
+# template
+mysqldump -h ${hosname} -u${user_name} -p ${password} ${database_name} > ${file_name}.sql
+
+데이터베이스 단위의 덤프파일에서 특정 테이블 추출 명령
+# template
+sed -n -e ' /DROP TABLE.*  `${table_name}` /,/UNLOCK TABLES/p ' ${dumpfile_name}.sql > ${file_name}.sql'
+
+
+
+
+# targetlist
+# callhistory
+
+sed -n -e '/DROP TABLE.*callhistory/,/UNLOCK TABLES/p' pds_db_20220407.sql> pds_db_20220407.callhistory.sql
+sed -n -e '/DROP TABLE.*targetlist/,/UNLOCK TABLES/p' pds_db_20220407.sql> pds_db_20220407.targetlist.sql
