@@ -99,9 +99,9 @@
 	
 ```
 	$ git clone ssh://계정주소@ip주소:포트번호/깃 프로젝트 폴더 주소
-	$ git clone ssh://git@19.19.20.212:22/home/git/repo/project.git
+	$ git clone ssh://git@localhost:22/home/git/repo/project.git
 	
-	$ git remote add origin ssh://git@19.19.20.212:22/home/git/repo/project.git
+	$ git remote add origin ssh://git@localhost:22/home/git/repo/project.git
 	$ git pull origin master
 ```
 
