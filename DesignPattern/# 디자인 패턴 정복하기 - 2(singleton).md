@@ -1,4 +1,4 @@
-# 디자인 패턴 정복하기 - 2
+# 디자인 패턴 정복하기 - 2 
 
 ## 싱글톤 패턴 Singleton Pattern
 
@@ -53,34 +53,35 @@
 3. `getInstance` 메서드를 구현하여 인스턴스를 반환합니다.
 이 때, 인스턴스가 생성되어 있는 경우에는 해당 인스턴스를 반환하고, 생성되어 있지 않은 경우에는 인스턴스를 생성하여 반환합니다.
 
-    ```java
-    public class Singleton {
-        private static Singleton instance = null;
-        public String field = "Some value";
-        
-        private Singleton() {
-        }
-        
-        public static Singleton getInstance() {
-            if (instance == null) {
-                instance = new Singleton();
-            }
-            return instance;
-        }
-        
-        public static void main(String[] args) {
-            Singleton singleton1 = Singleton.getInstance();
-            Singleton singleton2 = Singleton.getInstance();
-
-            System.out.println("singleton1 = " + singleton1);
-            System.out.println("singleton2 = " + singleton2);
-            
-            System.out.println("Are the two instances the same object? " 
-                    + (singleton1 == singleton2));
-        }
+```java
+public class Singleton {
+    private static Singleton instance = null;
+    public String field = "Some value";
+    
+    private Singleton() {
     }
-    ```
+    
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+    
+    public static void main(String[] args) {
+        Singleton singleton1 = Singleton.getInstance();
+        Singleton singleton2 = Singleton.getInstance();
+
+        System.out.println("singleton1 = " + singleton1);
+        System.out.println("singleton2 = " + singleton2);
+        
+        System.out.println("Are the two instances the same object? " 
+                + (singleton1 == singleton2));
+    }
+}
+```
 - result
+
     ![이미지](../%EA%B8%B0%ED%83%80/img/resultSingleton.png)
 
 --- 
